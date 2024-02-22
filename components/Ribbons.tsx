@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeItems } from "../constant";
+import { HomeItems } from "../constants";
 import Contents from './RibbonSlide'
 
 function Ribbons({ ribbons }: {ribbons: HomeItems}) {

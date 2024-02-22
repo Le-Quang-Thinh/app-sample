@@ -1,3 +1,39 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "import", "react", "i18next", "react-hooks"],
+  "rules": {
+    // "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/no-shadow": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "no-async-promise-executor": "warn",
+    "comma-dangle": ["warn", "never"],
+    "max-len": ["warn", { "code": 100, "ignoreComments": true }],
+    "no-shadow": "off",
+    "no-unsafe-optional-chaining": 0,
+    "object-curly-spacing": ["warn", "always"],
+    "react-hooks/exhaustive-deps": "warn",
+    "i18next/no-literal-string": 0,
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
+  }
 }

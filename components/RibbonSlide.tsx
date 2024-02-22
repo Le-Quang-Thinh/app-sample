@@ -1,10 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import { HomeItems } from "../constant";
+import { HomeItems } from "../constants";
 import Image from "next/image";
 import Link from "next/link";
 import imageLoader from '../hooks/imageLoader'
-import Content from './styles/contents'
 
 function Contents({ contents }: {contents: HomeItems}) {
   var settings = {
@@ -17,7 +16,7 @@ function Contents({ contents }: {contents: HomeItems}) {
     <Slider {...settings}>
       {contents?.map((items: any) => {
         return (
-          <Content
+          <div
             key={`contents-${items?.id}`}
             className="content-wrapper"
           >
@@ -32,7 +31,7 @@ function Contents({ contents }: {contents: HomeItems}) {
                 className="content-img"
               />
             </Link>
-        </Content>
+        </div>
         )
       })}
     </Slider>

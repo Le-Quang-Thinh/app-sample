@@ -1,9 +1,7 @@
-
-
-
+import fetch from "isomorphic-fetch";
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
-import { Landing } from "../../constant";
+import { Landing } from "../../constants";
 
 function ContentLanding({ data }: { data: any }) {
   const router = useRouter();

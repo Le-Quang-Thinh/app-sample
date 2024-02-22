@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { HomeItems } from "../constant";
+import { HomeItems } from "../constants";
 import Image from "next/image";
 import Link from "next/link";
 import imageLoader from '../hooks/imageLoader'
